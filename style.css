@@ -1,0 +1,104 @@
+body {
+    background-color: #383838;
+    font-family: Monaco, Consolas, "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: aliceblue;
+  }
+  
+  .container {
+    text-align: center;
+  }
+
+  #instruction {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    transition: opacity 0.5s ease;
+  }
+  
+  #instruction.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }  
+  
+  #egg {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  #egg.crack {
+    transform: scale(1.1) rotate(-5deg);
+    filter: brightness(1.1);
+  }
+  
+  #explosion {
+    width: 300px;
+    margin: 20px auto;
+    display: block;
+    animation: explode 0.5s ease-out forwards;
+  }
+  
+  @keyframes explode {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1.2); }
+  }
+  
+  #surprise {
+    margin-top: 20px;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .surprise-img {
+    width: 200px;
+    height: auto;
+    margin-bottom: -40px;
+  }  
+
+  #surprise:not(.hidden) {
+    opacity: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  #explosion {
+    width: 250px;
+    margin: 20px auto;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  #explosion.show {
+    opacity: 1;
+    animation: explode 0.5s ease-out;
+  }
+  
+  #try-again {
+    margin-top: 100px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive;
+    transition: background-color 0.3s ease;
+  }
+  
+  #try-again:hover {
+    background-color: #ff4757;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
